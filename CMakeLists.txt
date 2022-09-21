@@ -1,0 +1,157 @@
+cmake_minimum_required(VERSION 3.21)
+project(Hort_V1)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(.)
+include_directories(Hort_V1_main)
+include_directories(Hort_V1_main/include)
+include_directories(Hort_V1_main/include/display)
+include_directories(Hort_V1_main/include/display/lv_core)
+include_directories(Hort_V1_main/include/display/lv_draw)
+include_directories(Hort_V1_main/include/display/lv_fonts)
+include_directories(Hort_V1_main/include/display/lv_hal)
+include_directories(Hort_V1_main/include/display/lv_misc)
+include_directories(Hort_V1_main/include/display/lv_objx)
+include_directories(Hort_V1_main/include/display/lv_themes)
+include_directories(Hort_V1_main/include/EZ-Template)
+include_directories(Hort_V1_main/include/EZ-Template/drive)
+include_directories(Hort_V1_main/include/pros)
+include_directories(Hort_V1_main/src)
+
+add_executable(Hort_V1
+        Hort_V1_main/include/display/lv_core/lv_group.h
+        Hort_V1_main/include/display/lv_core/lv_indev.h
+        Hort_V1_main/include/display/lv_core/lv_lang.h
+        Hort_V1_main/include/display/lv_core/lv_obj.h
+        Hort_V1_main/include/display/lv_core/lv_refr.h
+        Hort_V1_main/include/display/lv_core/lv_style.h
+        Hort_V1_main/include/display/lv_core/lv_vdb.h
+        Hort_V1_main/include/display/lv_draw/lv_draw.h
+        Hort_V1_main/include/display/lv_draw/lv_draw_arc.h
+        Hort_V1_main/include/display/lv_draw/lv_draw_img.h
+        Hort_V1_main/include/display/lv_draw/lv_draw_label.h
+        Hort_V1_main/include/display/lv_draw/lv_draw_line.h
+        Hort_V1_main/include/display/lv_draw/lv_draw_rbasic.h
+        Hort_V1_main/include/display/lv_draw/lv_draw_rect.h
+        Hort_V1_main/include/display/lv_draw/lv_draw_triangle.h
+        Hort_V1_main/include/display/lv_draw/lv_draw_vbasic.h
+        Hort_V1_main/include/display/lv_fonts/lv_font_builtin.h
+        Hort_V1_main/include/display/lv_hal/lv_hal.h
+        Hort_V1_main/include/display/lv_hal/lv_hal_disp.h
+        Hort_V1_main/include/display/lv_hal/lv_hal_indev.h
+        Hort_V1_main/include/display/lv_hal/lv_hal_tick.h
+        Hort_V1_main/include/display/lv_misc/lv_anim.h
+        Hort_V1_main/include/display/lv_misc/lv_area.h
+        Hort_V1_main/include/display/lv_misc/lv_circ.h
+        Hort_V1_main/include/display/lv_misc/lv_color.h
+        Hort_V1_main/include/display/lv_misc/lv_font.h
+        Hort_V1_main/include/display/lv_misc/lv_fs.h
+        Hort_V1_main/include/display/lv_misc/lv_gc.h
+        Hort_V1_main/include/display/lv_misc/lv_ll.h
+        Hort_V1_main/include/display/lv_misc/lv_log.h
+        Hort_V1_main/include/display/lv_misc/lv_math.h
+        Hort_V1_main/include/display/lv_misc/lv_mem.h
+        Hort_V1_main/include/display/lv_misc/lv_symbol_def.h
+        Hort_V1_main/include/display/lv_misc/lv_task.h
+        Hort_V1_main/include/display/lv_misc/lv_templ.h
+        Hort_V1_main/include/display/lv_misc/lv_txt.h
+        Hort_V1_main/include/display/lv_misc/lv_ufs.h
+        Hort_V1_main/include/display/lv_objx/lv_arc.h
+        Hort_V1_main/include/display/lv_objx/lv_bar.h
+        Hort_V1_main/include/display/lv_objx/lv_btn.h
+        Hort_V1_main/include/display/lv_objx/lv_btnm.h
+        Hort_V1_main/include/display/lv_objx/lv_calendar.h
+        Hort_V1_main/include/display/lv_objx/lv_canvas.h
+        Hort_V1_main/include/display/lv_objx/lv_cb.h
+        Hort_V1_main/include/display/lv_objx/lv_chart.h
+        Hort_V1_main/include/display/lv_objx/lv_cont.h
+        Hort_V1_main/include/display/lv_objx/lv_ddlist.h
+        Hort_V1_main/include/display/lv_objx/lv_gauge.h
+        Hort_V1_main/include/display/lv_objx/lv_img.h
+        Hort_V1_main/include/display/lv_objx/lv_imgbtn.h
+        Hort_V1_main/include/display/lv_objx/lv_kb.h
+        Hort_V1_main/include/display/lv_objx/lv_label.h
+        Hort_V1_main/include/display/lv_objx/lv_led.h
+        Hort_V1_main/include/display/lv_objx/lv_line.h
+        Hort_V1_main/include/display/lv_objx/lv_list.h
+        Hort_V1_main/include/display/lv_objx/lv_lmeter.h
+        Hort_V1_main/include/display/lv_objx/lv_mbox.h
+        Hort_V1_main/include/display/lv_objx/lv_objx_templ.h
+        Hort_V1_main/include/display/lv_objx/lv_page.h
+        Hort_V1_main/include/display/lv_objx/lv_preload.h
+        Hort_V1_main/include/display/lv_objx/lv_roller.h
+        Hort_V1_main/include/display/lv_objx/lv_slider.h
+        Hort_V1_main/include/display/lv_objx/lv_spinbox.h
+        Hort_V1_main/include/display/lv_objx/lv_sw.h
+        Hort_V1_main/include/display/lv_objx/lv_ta.h
+        Hort_V1_main/include/display/lv_objx/lv_table.h
+        Hort_V1_main/include/display/lv_objx/lv_tabview.h
+        Hort_V1_main/include/display/lv_objx/lv_tileview.h
+        Hort_V1_main/include/display/lv_objx/lv_win.h
+        Hort_V1_main/include/display/lv_themes/lv_theme.h
+        Hort_V1_main/include/display/lv_themes/lv_theme_alien.h
+        Hort_V1_main/include/display/lv_themes/lv_theme_default.h
+        Hort_V1_main/include/display/lv_themes/lv_theme_material.h
+        Hort_V1_main/include/display/lv_themes/lv_theme_mono.h
+        Hort_V1_main/include/display/lv_themes/lv_theme_nemo.h
+        Hort_V1_main/include/display/lv_themes/lv_theme_night.h
+        Hort_V1_main/include/display/lv_themes/lv_theme_templ.h
+        Hort_V1_main/include/display/lv_themes/lv_theme_zen.h
+        Hort_V1_main/include/display/lv_conf.h
+        Hort_V1_main/include/display/lv_conf_checker.h
+        Hort_V1_main/include/display/lv_version.h
+        Hort_V1_main/include/display/lvgl.h
+        Hort_V1_main/include/EZ-Template/drive/drive.hpp
+        Hort_V1_main/include/EZ-Template/api.hpp
+        Hort_V1_main/include/EZ-Template/auton.hpp
+        Hort_V1_main/include/EZ-Template/auton_selector.hpp
+        Hort_V1_main/include/EZ-Template/PID.hpp
+        Hort_V1_main/include/EZ-Template/sdcard.hpp
+        Hort_V1_main/include/EZ-Template/util.hpp
+        Hort_V1_main/include/pros/adi.h
+        Hort_V1_main/include/pros/adi.hpp
+        Hort_V1_main/include/pros/api_legacy.h
+        Hort_V1_main/include/pros/apix.h
+        Hort_V1_main/include/pros/colors.h
+        Hort_V1_main/include/pros/distance.h
+        Hort_V1_main/include/pros/distance.hpp
+        Hort_V1_main/include/pros/ext_adi.h
+        Hort_V1_main/include/pros/gps.h
+        Hort_V1_main/include/pros/gps.hpp
+        Hort_V1_main/include/pros/imu.h
+        Hort_V1_main/include/pros/imu.hpp
+        Hort_V1_main/include/pros/llemu.h
+        Hort_V1_main/include/pros/llemu.hpp
+        Hort_V1_main/include/pros/misc.h
+        Hort_V1_main/include/pros/misc.hpp
+        Hort_V1_main/include/pros/motors.h
+        Hort_V1_main/include/pros/motors.hpp
+        Hort_V1_main/include/pros/optical.h
+        Hort_V1_main/include/pros/optical.hpp
+        Hort_V1_main/include/pros/rotation.h
+        Hort_V1_main/include/pros/rotation.hpp
+        Hort_V1_main/include/pros/rtos.h
+        Hort_V1_main/include/pros/rtos.hpp
+        Hort_V1_main/include/pros/screen.h
+        Hort_V1_main/include/pros/screen.hpp
+        Hort_V1_main/include/pros/serial.h
+        Hort_V1_main/include/pros/serial.hpp
+        Hort_V1_main/include/pros/vision.h
+        Hort_V1_main/include/pros/vision.hpp
+        Hort_V1_main/include/api.h
+        Hort_V1_main/include/autons.hpp
+        Hort_V1_main/include/Flywheel.hpp
+        Hort_V1_main/include/Indexer.hpp
+        Hort_V1_main/include/Intakes.hpp
+        Hort_V1_main/include/main.h
+        Hort_V1_main/src/.vscode/cquery_cached_index/c@@users@pc@documents@github@hw-everybot@src/autons.cpp
+        Hort_V1_main/src/.vscode/cquery_cached_index/c@@users@pc@documents@github@hw-everybot@src/claw.cpp
+        Hort_V1_main/src/.vscode/cquery_cached_index/c@@users@pc@documents@github@hw-everybot@src/f4-bar.cpp
+        Hort_V1_main/src/.vscode/cquery_cached_index/c@@users@pc@documents@github@hw-everybot@src/intakes.cpp
+        Hort_V1_main/src/.vscode/cquery_cached_index/c@@users@pc@documents@github@hw-everybot@src/main.cpp
+        Hort_V1_main/src/autons.cpp
+        Hort_V1_main/src/Flywheel.cpp
+        Hort_V1_main/src/Indexer.cpp
+        Hort_V1_main/src/Intakes.cpp
+        Hort_V1_main/src/main.cpp Hort_V1_main/src/EZ-Template/autons.cpp Hort_V1_main/src/EZ-Template/auton.cpp)
